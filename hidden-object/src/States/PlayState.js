@@ -1,10 +1,10 @@
 var PlayState = new Kiwi.State('PlayState');
 
 /**
-* The PlayState in the core state that is used in the game. 
+* The PlayState in the core state that is used in the game.
 *
 * It is the state where majority of the functionality occurs 'in-game' occurs.
-* 
+*
 *
 * @class playState
 * @extends State
@@ -14,7 +14,7 @@ var PlayState = new Kiwi.State('PlayState');
 
 
 /**
-* Since we have loaded all the graphics in the LoadingState, the we can skip adding in a preload method to this state and just  start at the create. 
+* Since we have loaded all the graphics in the LoadingState, the we can skip adding in a preload method to this state and just  start at the create.
 *
 * @method create
 * @public
@@ -33,28 +33,28 @@ PlayState.create = function () {
 
 
     //Add hint button
-    this.hintBtn = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.UI_btn, 618, 900);
+    this.hintBtn = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.UI_btn, 900, 616);
     this.addChild(this.hintBtn);
 
     //Add hint icon button
-    this.hintIcon = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.hint_btn, 618, 900);
+    this.hintIcon = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.hint_btn, 900, 618);
     this.addChild(this.hintIcon);
 
 
     this.hintBtn.input.onDown.add(this.doHint, this);
 
     //Add all the hidden objects and their corresponding UI preview images. Give the item random coordinates but inside of the game space.
-    this.addHiddenObject('1', Math.random() * 600, Math.random() * 700);
-    this.addHiddenObject('2', Math.random() * 600, Math.random() * 700);
-    this.addHiddenObject('3', Math.random() * 600, Math.random() * 700);
-    this.addHiddenObject('4', Math.random() * 600, Math.random() * 700);
-    this.addHiddenObject('5', Math.random() * 600, Math.random() * 700);
+    this.addHiddenObject('1', Math.random() * 700, Math.random() * 600);
+    this.addHiddenObject('2', Math.random() * 700, Math.random() * 600);
+    this.addHiddenObject('3', Math.random() * 700, Math.random() * 600);
+    this.addHiddenObject('4', Math.random() * 700, Math.random() * 600);
+    this.addHiddenObject('5', Math.random() * 700, Math.random() * 600);
 }
 
 
 /**
 * This method adds a new hidden object and its preview image onto the game.
-* 
+*
 * @method addHiddenObject
 * @public
 * @param objName{String}
@@ -70,11 +70,11 @@ PlayState.addHiddenObject = function (objName, objX, objY) {
     this.addChild(this['hiddenObject' + objName]);
 
     //UI Base of each preview button
-    this['UIBase' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.UI_btn, 110 * this.hiddenObjects.length + 50, 900);
+    this['UIBase' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.UI_btn, 900, 110 * this.hiddenObjects.length + 50);
     this.addChild(this['UIBase' + objName])
 
     //UI preview image
-    this['UIButton' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures['UI_' + objName], 110 * this.hiddenObjects.length + 50, 900);
+    this['UIButton' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures['UI_' + objName], 900, 110 * this.hiddenObjects.length + 50);
     this.addChild(this['UIButton' + objName]);
 
     this.hiddenObjects.push(this['hiddenObject' + objName]);
@@ -94,7 +94,7 @@ PlayState.doHint = function () {
             this.hiddenObjects[i].transform.scaleX = 1;
             this.hiddenObjects[i].transform.scaleY = 1;
         }
-        
+
         //get hidden ones, randomize selection and scale.
         var rand = Math.floor(Math.random() * this.hiddenObjects.length);
         if (this.hiddenObjects[rand].visible) {
@@ -109,7 +109,7 @@ PlayState.doHint = function () {
 
 
 /**
-* This method removes located object from the background image and UI, for when they have found a image. 
+* This method removes located object from the background image and UI, for when they have found a image.
 *
 * @method clickObject
 * @public

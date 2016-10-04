@@ -1,7 +1,9 @@
-body {
-	margin: 0 auto;
+html, body {
+	margin: 0;
+	padding: 0;
 }
 
 #content, #content canvas {
-	max-width: 100% ;
+	width: 1024px;
+	height: 768px;
 }
