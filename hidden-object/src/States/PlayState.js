@@ -11,6 +11,14 @@ PlayState.create = function () {
     this.bg = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.bg, 0, 0);
     this.addChild(this.bg);
 
+    //Add close
+    this.close = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.UI_close, 1030, 610);
+    this.close.input.onDown.add(function(){
+      var frameElement = window.parent.document.querySelector('.game-frame');
+      frameElement.parentNode.removeChild(frameElement);
+    },this);
+    this.addChild(this.close);
+
 
     //Add all the hidden objects and their corresponding UI preview images. Give the item random coordinates but inside of the game space.
     this.addHiddenObject('1', 426, 152); //box
