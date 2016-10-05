@@ -25,8 +25,8 @@ LoadingState.preload = function () {
     this.addImage('UI_4', 'assets/img/tile-pieter.png');
     this.addImage('UI_5', 'assets/img/tile-wesley.png');
 
-    this.addAudio('found', 'assets/img/found.mp3');
-    this.addAudio('winning', 'assets/img/winning.mp3');
+    this.addAudio('found', 'assets/audio/found.mp3');
+    this.addAudio('winning', 'assets/audio/winning.mp3');
 };
 
 LoadingState.create = function(){
