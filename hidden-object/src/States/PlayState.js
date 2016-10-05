@@ -22,6 +22,9 @@ PlayState.create = function () {
     // Create sounds
     this.soundFound = new Kiwi.Sound.Audio(this.game, 'found', 1, false);
     this.soundWin = new Kiwi.Sound.Audio(this.game, 'winning', 1, false);
+    this.music = new Kiwi.Sound.Audio(this.game, 'music', 0.2, true);
+
+    this.music.play();
 }
 
 PlayState.addHiddenObject = function (objName, objX, objY) {
@@ -63,6 +66,7 @@ PlayState.clickObject = function (hiddenObj) {
           this.fireworks = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.fireworks, 0, 0);
           this.fireworks.alpha = 0.5;
           this.fireworks.input.onDown.add(function(){
+            this.music.stop();
             this.game.states.switchState('LoadingState');
           }, this);
           this.addChild(this.fireworks);
