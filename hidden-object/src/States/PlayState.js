@@ -1,24 +1,5 @@
 var PlayState = new Kiwi.State('PlayState');
 
-/**
-* The PlayState in the core state that is used in the game.
-*
-* It is the state where majority of the functionality occurs 'in-game' occurs.
-*
-*
-* @class playState
-* @extends State
-* @namespace Kiwi.BluePrints.HiddenObject
-* @constructor
-*/
-
-
-/**
-* Since we have loaded all the graphics in the LoadingState, the we can skip adding in a preload method to this state and just  start at the create.
-*
-* @method create
-* @public
-*/
 PlayState.create = function () {
 
 
@@ -33,23 +14,13 @@ PlayState.create = function () {
 
 
     //Add all the hidden objects and their corresponding UI preview images. Give the item random coordinates but inside of the game space.
-    this.addHiddenObject('1', Math.random() * 700, Math.random() * 600);
-    this.addHiddenObject('2', Math.random() * 700, Math.random() * 600);
-    this.addHiddenObject('3', Math.random() * 700, Math.random() * 600);
-    this.addHiddenObject('4', Math.random() * 700, Math.random() * 600);
-    this.addHiddenObject('5', Math.random() * 700, Math.random() * 600);
+    this.addHiddenObject('1', 426, 152); //box
+    this.addHiddenObject('2', 1280, 100); //bunny
+    this.addHiddenObject('3', 670, 290); //mug
+    this.addHiddenObject('4', 803, 250); //pieter
+    this.addHiddenObject('5', 1149, 350); //wesley
 }
 
-
-/**
-* This method adds a new hidden object and its preview image onto the game.
-*
-* @method addHiddenObject
-* @public
-* @param objName{String}
-* @param objX{Number}
-* @param objY{Number}
-*/
 PlayState.addHiddenObject = function (objName, objX, objY) {
 
     //Object hidden on the stage
@@ -58,25 +29,13 @@ PlayState.addHiddenObject = function (objName, objX, objY) {
     this['hiddenObject' + objName].input.onDown.add(this.clickObject, this);
     this.addChild(this['hiddenObject' + objName]);
 
-    //UI Base of each preview button
-    this['UIBase' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.UI_btn, 900, 110 * this.hiddenObjects.length + 50);
-    this.addChild(this['UIBase' + objName])
-
     //UI preview image
-    this['UIButton' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures['UI_' + objName], 900, 110 * this.hiddenObjects.length + 50, 900);
+    this['UIButton' + objName] = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures['UI_' + objName], 180 * this.hiddenObjects.length + 100, 570);
     this.addChild(this['UIButton' + objName]);
 
     this.hiddenObjects.push(this['hiddenObject' + objName]);
 }
 
-
-/**
-* This method removes located object from the background image and UI, for when they have found a image.
-*
-* @method clickObject
-* @public
-* @param hiddenObj{Sprite}
-*/
 PlayState.clickObject = function (hiddenObj) {
     //remove object and associated UI btn
     hiddenObj.visible = false;
