@@ -1,0 +1,43 @@
+@import "variables";
+
+.order-status-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.order-status-container--left {
+  width: calc(45% - 1rem);
+  margin-right: $grid-gutter/2;
+}
+
+.order-status-container--right {
+  flex: 55% 1 1;
+}
+
+.order-status-container--bottom {
+  margin-top: $grid-gutter/2;
+  flex: 100% 0 0;
+}
+
+
+
+.order-status--title{
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.order-status--text {
+  margin-top: $grid-gutter;
+  color: $color-silver;
+  font-size: 1.8rem;
+}
+
+.order-status--text-highlight {
+  color: $color-coolblue;
+}
+
+.order-status--title-sub {
+  float: right;
+  color: $color-silver;
+}

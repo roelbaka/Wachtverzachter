@@ -1,0 +1,28 @@
+@import "variables";
+
+.article + .article {
+  margin-top: 3rem;
+}
+
+.article--date {
+  font-size: 1rem;
+  color: $color-silver;
+}
+
+.article--image {
+  background: $color-white;
+  margin: $grid-gutter ($grid-gutter * -1.5) 0;
+  border: 1px solid $color-grey;
+  box-shadow: 2px 2px 2px $color-grey;
+
+   > * {
+     width: 100%;
+   }
+}
+
+.article--title {
+  margin-top: $grid-gutter;
+  color: $color-coolblue;
+  font-size: 1.6rem;
+  font-weight: 600;
+}

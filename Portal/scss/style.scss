@@ -1,0 +1,19 @@
+@import "variables";
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-whitesmoke;
+  font-family: $font-open-sans;
+  font-size: 1.4rem;
+}
+
+.container {
+  padding: 0 $grid-gutter;
+}

@@ -1,0 +1,7 @@
+@import "variables";
+
+.block {
+  border: 1px solid $color-grey;
+  background: $color-white;
+  padding: $grid-gutter;
+}

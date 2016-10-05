@@ -1,0 +1,26 @@
+@import "variables";
+
+.fact-slogan--fact {
+  color: $color-darkblue;
+  display: inline-block;
+  font-family: $font-avenir;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.19px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  width: auto;
+
+  &:after {
+    content: ".";
+    color: $color-hotorange;
+  }
+}
+
+.fact-slogan--slogan {
+  font-size: 2.3rem;
+  color: $color-coolblue;
+  display: block;
+  font-family: $font-dobra;
+}
