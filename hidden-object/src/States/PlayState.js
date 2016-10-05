@@ -14,11 +14,11 @@ PlayState.create = function () {
 
 
     //Add all the hidden objects and their corresponding UI preview images. Give the item random coordinates but inside of the game space.
-    this.addHiddenObject('1', Math.random() * 700, Math.random() * 600);
-    this.addHiddenObject('2', Math.random() * 700, Math.random() * 600);
-    this.addHiddenObject('3', Math.random() * 700, Math.random() * 600);
-    this.addHiddenObject('4', Math.random() * 700, Math.random() * 600);
-    this.addHiddenObject('5', Math.random() * 700, Math.random() * 600);
+    this.addHiddenObject('1', 426, 152); //box
+    this.addHiddenObject('2', 1280, 100); //bunny
+    this.addHiddenObject('3', 670, 290); //mug
+    this.addHiddenObject('4', 803, 250); //pieter
+    this.addHiddenObject('5', 1149, 350); //wesley
 }
 
 PlayState.addHiddenObject = function (objName, objX, objY) {
