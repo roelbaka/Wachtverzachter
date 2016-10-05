@@ -27,6 +27,7 @@ LoadingState.preload = function () {
 
     this.addAudio('found', 'assets/audio/found.mp3');
     this.addAudio('winning', 'assets/audio/winning.mp3');
+    this.addAudio('music', 'assets/audio/background-music.mp3');
 };
 
 LoadingState.create = function(){
