@@ -2,6 +2,7 @@
     "short_name": "Pre-order Survival App",
     "name": "Coolblue Pre-order Survival App",
     "description": "",
+    "gcm_sender_id": "3012155472",
     "icons": [
         {
             "src": "./images/icons/icon180.png",
