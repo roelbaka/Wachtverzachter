@@ -9,13 +9,14 @@
 *
 */
 
-var LoadingState = new Kiwi.State( "LoadingState" );
+var LoadingState = new Kiwi.State('LoadingState');
 
 LoadingState.preload = function () {
 
     this.game.stage.resize(1334, 750);
 
     this.addImage('bg', 'assets/img/game-assets--background.jpg');
+    this.addImage('fireworks', 'assets/img/fireworks.jpg');
     this.addImage('hidden_1', 'assets/img/item-box.png');
     this.addImage('hidden_2', 'assets/img/item-bunny.png');
     this.addImage('hidden_3', 'assets/img/item-mug.png');
@@ -26,8 +27,11 @@ LoadingState.preload = function () {
     this.addImage('UI_3', 'assets/img/tile-mug.png');
     this.addImage('UI_4', 'assets/img/tile-pieter.png');
     this.addImage('UI_5', 'assets/img/tile-wesley.png');
+
+    this.addAudio('found', 'assets/img/found.mp3');
+    this.addAudio('winning', 'assets/img/winning.mp3');
 };
 
 LoadingState.create = function(){
-    this.game.states.switchState( "PlayState" );
+    this.game.states.switchState('PlayState');
 }

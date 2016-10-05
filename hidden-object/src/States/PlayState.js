@@ -7,7 +7,6 @@ PlayState.create = function () {
     this.hiddenObjects = [];
     this.gameComplete = false;
 
-
     //Add bg
     this.bg = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.bg, 0, 0);
     this.addChild(this.bg);
@@ -19,6 +18,10 @@ PlayState.create = function () {
     this.addHiddenObject('3', 670, 290); //mug
     this.addHiddenObject('4', 803, 250); //pieter
     this.addHiddenObject('5', 1149, 350); //wesley
+
+    // Create sounds
+    this.soundFound = new Kiwi.Sound.Audio(this.game, 'found', 1, false);
+    this.soundWin = new Kiwi.Sound.Audio(this.game, 'winning', 1, false);
 }
 
 PlayState.addHiddenObject = function (objName, objX, objY) {
@@ -37,6 +40,10 @@ PlayState.addHiddenObject = function (objName, objX, objY) {
 }
 
 PlayState.clickObject = function (hiddenObj) {
+    if (!hiddenObj.visible) {
+      return;
+    }
+
     //remove object and associated UI btn
     hiddenObj.visible = false;
     this['UIButton' + hiddenObj.objName].visible = false;
@@ -52,5 +59,15 @@ PlayState.clickObject = function (hiddenObj) {
     //completion
     if (allFound) {
         this.gameComplete = true;
+        this.fireworks = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.fireworks, 0, 0);
+        this.fireworks.alpha = 0.5;
+        this.fireworks.input.onDown.add(function(){
+          location.href = location.href;
+        }, this);
+        this.addChild(this.fireworks);
+        this.soundWin.play();
+    } else {
+        this.soundFound.stop();
+        this.soundFound.play();
     }
 }
