@@ -1,0 +1,59 @@
+@import "variables";
+
+$status-bar-height: 0.7rem;
+
+.status-bar {
+  border: 1px solid $color-winterblue;
+  height: $status-bar-height;
+  border-radius: 10rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 600;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 5%;
+    background: $color-coolblue;
+    border-radius: 10rem;
+    height: calc(#{$status-bar-height} - 2px);
+  }
+}
+
+.status-bar--percentage {
+  position: absolute;
+  left: 3%;
+  top: 1.2rem;
+}
+
+.status-bar--indicator {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  padding-top: 1.2rem;
+  color: $color-coolblue;
+
+  &:before {
+    content: "";
+    display: block;
+    height: calc( #{$status-bar-height} + 4px);
+    width: 0.3rem;
+    border-radius: 10rem;
+    background: $color-coolblue;
+    position: absolute;
+    top: -4px;
+    left: calc(40% + 2px);
+  }
+
+  &:after {
+    content: "";
+    border-radius: 50%;
+    height: 0.7rem;
+    width: 0.7rem;
+    background: $color-coolblue;
+    position: absolute;
+    left: 40%;
+    top: 4px;
+  }
+}

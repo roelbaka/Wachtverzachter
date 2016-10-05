@@ -59,12 +59,14 @@ PlayState.clickObject = function (hiddenObj) {
     //completion
     if (allFound) {
         this.gameComplete = true;
-        this.fireworks = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.fireworks, 0, 0);
-        this.fireworks.alpha = 0.5;
-        this.fireworks.input.onDown.add(function(){
-          this.game.states.switchState('LoadingState');
-        }, this);
-        this.addChild(this.fireworks);
+        setTimeout((function(){
+          this.fireworks = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.fireworks, 0, 0);
+          this.fireworks.alpha = 0.5;
+          this.fireworks.input.onDown.add(function(){
+            this.game.states.switchState('LoadingState');
+          }, this);
+          this.addChild(this.fireworks);
+        }).bind(this),100);
         this.soundWin.play();
     } else {
         this.soundFound.stop();
