@@ -12,9 +12,6 @@
 var LoadingState = new Kiwi.State('LoadingState');
 
 LoadingState.preload = function () {
-
-    this.game.stage.resize(1334, 750);
-
     this.addImage('bg', 'assets/img/game-assets--background.jpg');
     this.addImage('fireworks', 'assets/img/fireworks.jpg');
     this.addImage('hidden_1', 'assets/img/item-box.png');
