@@ -15,7 +15,7 @@ LoadingState.preload = function () {
 
     this.game.stage.resize(1334, 750);
 
-    this.addImage('bg', 'assets/img/game-assets--background.png');
+    this.addImage('bg', 'assets/img/game-assets--background.jpg');
     this.addImage('hidden_1', 'assets/img/item-box.png');
     this.addImage('hidden_2', 'assets/img/item-bunny.png');
     this.addImage('hidden_3', 'assets/img/item-mug.png');
