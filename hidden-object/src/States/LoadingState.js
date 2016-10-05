@@ -19,7 +19,11 @@
 * 3 - dimensions {Object} A Object containing the width/height that the game is to be. For example {width: 1024, height: 768}
 * 4 - subfolder {String} The folder that the loading graphics are located at.
 */
-var LoadingState = new KiwiLoadingScreen('LoadingState',  'IntroState', {width:1024, height: 768}, 'assets/img/loading/');
+
+var LoadingState = new Kiwi.State( "LoadingState" );
+
+
+//var LoadingState = new KiwiLoadingScreen('LoadingState',  'PlayState', {width:1334, height: 750}, 'assets/img/loading/');
 
 /**
 * This preload method is responsible for preloading all your in game assets.
@@ -31,9 +35,9 @@ LoadingState.preload = function () {
 
     //Make sure to call the super at the top.
     //Otherwise the loading graphics will load last, and that defies the whole point in loading them.
-    KiwiLoadingScreen.prototype.preload.call(this);
+    //KiwiLoadingScreen.prototype.preload.call(this);
 
-    this.addImage('bg', 'assets/img/bg.png');
+    this.addImage('bg', 'assets/img/bg.jpg');
     this.addImage('hidden_1', 'assets/img/hidden_1.png');
     this.addImage('hidden_2', 'assets/img/hidden_2.png');
     this.addImage('hidden_3', 'assets/img/hidden_3.png');
@@ -45,5 +49,9 @@ LoadingState.preload = function () {
     this.addImage('UI_4', 'assets/img/UI_4.png');
     this.addImage('UI_5', 'assets/img/UI_5.png');
     this.addImage('UI_btn', 'assets/img/UI_btn.png');
-    this.addImage('hint_btn', 'assets/img/hint.png');
 };
+
+LoadingState.create = function(){
+    this.game.stage.resize(1334, 750);
+    this.game.states.switchState( "PlayState" );
+}
