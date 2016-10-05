@@ -12,11 +12,11 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('push', function(event) {
   console.log('Push message', event);
 
-  var title = 'Push message';
+  var title = 'Update over je pre-order!';
 
   event.waitUntil(
     self.registration.showNotification(title, {
-     body: 'Coolblue pre-order survival app',
+     body: 'Bekijk het laatste nieuws',
      icon: './images/icons/icon180.png',
      tag: 'coolblue'
    }));
