@@ -7,11 +7,13 @@
 .article--date {
   font-size: 1rem;
   color: $color-silver;
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
 }
 
 .article--image {
   background: $color-white;
-  margin: $grid-gutter ($grid-gutter * -1.5) 0;
+  margin: $grid-gutter-small ($grid-gutter * -1.5) 0;
   border: 1px solid $color-grey;
   box-shadow: 2px 2px 2px $color-grey;
 

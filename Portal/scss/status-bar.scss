@@ -1,22 +1,23 @@
 @import "variables";
 
-$status-bar-height: 0.7rem;
+$status-bar-height: 1.4rem;
 
 .status-bar {
   border: 1px solid $color-winterblue;
+  background: $color-greyblue;
   height: $status-bar-height;
-  border-radius: 10rem;
+  border-radius: 3px;
   margin-bottom: 1.5rem;
   position: relative;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
 
   &:before {
     content: "";
     display: block;
     width: 5%;
-    background: $color-coolblue;
-    border-radius: 10rem;
+    background: $color-darkblue;
+    border-radius: 2px;
     height: calc(#{$status-bar-height} - 2px);
   }
 }
@@ -24,26 +25,26 @@ $status-bar-height: 0.7rem;
 .status-bar--percentage {
   position: absolute;
   left: 3%;
-  top: 1.2rem;
+  top: calc(#{$status-bar-height} + 0.4rem);
 }
 
 .status-bar--indicator {
   position: absolute;
   top: 0;
   left: 40%;
-  padding-top: 1.2rem;
+  padding-top: calc(#{$status-bar-height} + 0.4rem);;
   color: $color-coolblue;
 
   &:before {
     content: "";
     display: block;
-    height: calc( #{$status-bar-height} + 4px);
+    height: calc( #{$status-bar-height} + 0.4rem);
     width: 0.3rem;
     border-radius: 10rem;
     background: $color-coolblue;
     position: absolute;
     top: -4px;
-    left: calc(40% + 2px);
+    left: calc(40% + 0.2rem);
   }
 
   &:after {
@@ -54,6 +55,6 @@ $status-bar-height: 0.7rem;
     background: $color-coolblue;
     position: absolute;
     left: 40%;
-    top: 4px;
+    top: calc(#{$status-bar-height} - 0.4rem);
   }
 }

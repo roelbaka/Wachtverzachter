@@ -18,12 +18,11 @@
 }
 
 .order-status-container--left {
-  flex: calc(40% - 1rem) 0 0;
   margin-right: $grid-gutter/2;
 }
 
 .order-status-container--right {
-  flex: 60% 1 1;
+  flex: 55% 1 1;
 }
 
 .order-status-container--bottom {
@@ -40,7 +39,7 @@
 }
 
 .order-status--text {
-  margin-top: $grid-gutter;
+  margin-top: $grid-gutter-small;
   color: $color-silver;
   font-size: 1.8rem;
 }
@@ -59,6 +58,10 @@
   color: $color-silver;
 }
 
-.order-status--status-bar {
+.order-status--status-bar-container {
   margin-top: $grid-gutter * 1.5;
+}
+
+.order-status--status-bar {
+  margin-top: $grid-gutter-small;
 }

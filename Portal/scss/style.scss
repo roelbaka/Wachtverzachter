@@ -11,9 +11,14 @@ html {
 body {
   background: $color-whitesmoke;
   font-family: $font-open-sans;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .container {
-  padding: 0 $grid-gutter; 
+  padding: 0 $grid-gutter;
+}
+
+p {
+  line-height: 160%;
+  margin-bottom: 0;
 }
