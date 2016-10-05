@@ -1,0 +1,17 @@
+{
+    "short_name": "Pre-order Survival App",
+    "name": "Coolblue Pre-order Survival App",
+    "description": "",
+    "icons": [
+        {
+            "src": "./images/icons/icon180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#0090e3",
+    "background_color": "#0090e3"
+}

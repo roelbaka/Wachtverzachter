@@ -1,12 +1,24 @@
 @import "variables";
 
 .order-status-container {
+  margin: 0 -$grid-gutter;
+  overflow: hidden
+}
+
+.order-status-container--content {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+.order-status-container--top {
+  margin-bottom: $grid-gutter/2;
+  flex: 100% 0 0;
 }
 
 .order-status-container--left {
-  width: calc(45% - 1rem);
+  flex: calc(45% - 1rem) 0 0;
   margin-right: $grid-gutter/2;
 }
 
@@ -33,6 +45,11 @@
   font-size: 1.8rem;
 }
 
+.order-status--image {
+  float: left;
+  margin-right: $grid-gutter;
+}
+
 .order-status--text-highlight {
   color: $color-coolblue;
 }
@@ -40,4 +57,8 @@
 .order-status--title-sub {
   float: right;
   color: $color-silver;
+}
+
+.order-status--status-bar {
+  margin-top: $grid-gutter * 1.5;
 }

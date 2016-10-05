@@ -15,39 +15,52 @@
 
   <div class="container">
     <div class="fact-slogan">
-    <h1 class="fact-slogan--fact">Iedereen klaar</h1>
-    <span class="fact-slogan--slogan">Wachten maar!</span>
+    <h1 class="fact-slogan--fact">Informatie</h1>
+    <span class="fact-slogan--slogan">Geven we graag.</span>
     </div>
 
     <section class="section">
-      <h2 class="section--header">Pre-orderinformatie</h2>
-      <p>iPhone 7 Jet Black 128GB met Vodafone abonnement</p>
-
       <div class="order-status-container">
-        <div class="order-status-container--left">
-          <div class="order-status block">
-            <strong class="order-status--title">Jouw besteldatum</strong>
-            <div class="order-status--text order-status--text-highlight">
-              26 okt.
+        <div class="order-status-container--content">
+          <div class="order-status-container--top">
+              <div class="order-status block">
+                <div class="order-status--image">
+                  <img src="./images/iphone7.png" height="45" width="45"/>
+                </div>
+                <h2 class="section--header">Jouw pre-order</h2>
+                <span>iPhone 7 Jet Black 128GB Vodafone</span>
+              </div>
+          </div>
+          <div class="order-status-container--left">
+            <div class="order-status block">
+              <strong class="order-status--title">Jouw besteldatum</strong>
+              <div class="order-status--text order-status--text-highlight">
+                26 okt.
+              </div>
             </div>
           </div>
-        </div>
-        <div class="order-status-container--right">
-          <div class="order-status block">
-            <strong class="order-status--title">Jouw leverdatum</strong>
-            <div class="order-status--text">
-              Nog niet bekend
+          <div class="order-status-container--right">
+            <div class="order-status block">
+              <strong class="order-status--title">Jouw leverdatum</strong>
+              <div class="order-status--text">
+                Nog niet bekend
+              </div>
             </div>
           </div>
-        </div>
-        <div class="order-status-container--bottom">
-          <div class="block order-status">
-            <strong class="order-status--title">
-              Geleverde iPhones
-              <span class="order-status--title-sub">
-                Alle pre-orders
-              </span>
-            </strong>
+          <div class="order-status-container--bottom">
+            <div class="block order-status">
+              <strong class="order-status--title">
+                Geleverde iPhones
+                <span class="order-status--title-sub">
+                  Alle pre-orders
+                </span>
+              </strong>
+
+              <div class="order-status--status-bar status-bar">
+                <span class="status-bar--percentage">5%</span>
+                <span class="status-bar--indicator">Jouw iPhone</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -55,14 +68,34 @@
     </section>
 
     <section class="section">
-      <h2 class="section--header">Updates</h2>
+      <h2 class="section--header">Laatste updates</h2>
+
+      <article class="article block">
+        <div class="article--date">Vandaag 13:32</div>
+        <div class="article--image">
+          <video width="100%" controls>
+            <source src="videos/zoektocht.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h3 class="article--title">VLOG: Pakketsnuffelen</h3>
+        <p>Sander gaat op zoek in ons magazijn, waar zijn die iPhones...</p>
+      </article>
 
       <article class="article block">
         <div class="article--date">Vandaag 13:32</div>
         <div class="article--image">
             <iframe src="https://vine.co/v/569rnJWelI3/embed/simple" width="100%" height="306" frameborder="0"></iframe>
         </div>
-        <h3 class="article--title">VLOG: Pakketsnuffelen</h3>
+        <h3 class="article--title">Hackathon</h3>
+        <p>Druk bezig!</p>
+      </article>
+
+      <article class="article block">
+        <div class="article--date">Gisteren 21:18</div>
+        <h3 class="article--title">Informatie</h3>
+        <p>Begin volgende week komt er een aanzienlijk aantal iPhone 7 en iPhone 7 plus modellen binnen.
+          Het betreft in dit geval alle kleuren en opslagcapaciteiten.
+        </p>
       </article>
 
       <article class="article block">
@@ -71,11 +104,12 @@
           <img src="./images/sadkitty.jpg"/>
         </div>
         <h3 class="article--title">Wachten is nooit leuk</h3>
+        <p>Dat vind deze kat ook niet.</p>
       </article>
     </section>
   </div>
 
 
-
+<script src="https://cdn.rawgit.com/GoogleChrome/pwacompat/v1.0.0/pwacompat.min.js"></script>
 </body>
 </html>
