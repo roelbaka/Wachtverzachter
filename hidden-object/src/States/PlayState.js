@@ -62,7 +62,7 @@ PlayState.clickObject = function (hiddenObj) {
         this.fireworks = new Kiwi.GameObjects.Sprite(PlayState, PlayState.textures.fireworks, 0, 0);
         this.fireworks.alpha = 0.5;
         this.fireworks.input.onDown.add(function(){
-          location.href = location.href;
+          this.game.states.switchState('LoadingState');
         }, this);
         this.addChild(this.fireworks);
         this.soundWin.play();
