@@ -117,8 +117,19 @@
     </section>
   </div>
 
-
-<script src="https://cdn.rawgit.com/GoogleChrome/pwacompat/v1.0.0/pwacompat.min.js"></script>
-<script src="./build/js/bundle.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBT6TYwqHKV29MCvzAuQhuzsRehJlAsMvI",
+      authDomain: "snartig-5e5f9.firebaseapp.com",
+      databaseURL: "https://snartig-5e5f9.firebaseio.com",
+      storageBucket: "snartig-5e5f9.appspot.com",
+      messagingSenderId: "3012155472"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://cdn.rawgit.com/GoogleChrome/pwacompat/v1.0.0/pwacompat.min.js"></script>
+  <script src="./build/js/bundle.js"></script>
 </body>
 </html>
