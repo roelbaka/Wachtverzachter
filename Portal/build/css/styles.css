@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 @font-face {
   font-family: "AvenirBlack";
-  src: local(Avenir-Black), local(AvenirBlack), url("./fonts/aebl____-webfont.woff2") format("woff2"), url("./fonts/aebl____-webfont.woff") format("woff"), url("./fonts/aebl____-webfont.ttf") format("truetype");
+  src: url("../../fonts/aebl____-webfont.woff2") format("woff2"), url("../../fonts/aebl____-webfont.woff") format("woff"), url("../../fonts/aebl____-webfont.ttf") format("truetype");
   font-style: normal;
   font-weight: 900; }
 
 @font-face {
   font-family: "DobraSlabBook";
-  src: local("DobraSlab"), local("DobraSlabBook"), url("/fonts/dobraslab-book-webfont.woff2") format("woff2"), url("/fonts/dobraslab-book-webfont.woff") format("woff"), url("/fonts/dobraslab-book-webfont.ttf") format("truetype");
+  src: url("../../fonts/dobraslab-book-webfont.woff2") format("woff2"), url("../../fonts/dobraslab-book-webfont.woff") format("woff"), url("../../fonts/dobraslab-book-webfont.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: "DobraSlabMedium";
-  src: local("DobraSlab"), local("DobraSlabMedium"), url("/fonts/dobraslab-medium-webfont.woff2") format("woff2"), url("/fonts/dobraslab-medium-webfont.woff") format("woff"), url("/fonts/dobraslab-medium-webfont.ttf") format("truetype");
+  src: url("../../fonts/dobraslab-medium-webfont.woff2") format("woff2"), url("../../fonts/dobraslab-medium-webfont.woff") format("woff"), url("../../fonts/dobraslab-medium-webfont.ttf") format("truetype");
   font-weight: 500;
   font-style: normal; }
 
