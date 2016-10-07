@@ -15,9 +15,9 @@
   font-family: "DobraSlabBook";
   src: local("DobraSlab"),
   local("DobraSlabBook"),
-  url("/fonts/dobraslab-book-webfont.woff2") format("woff2"),
-  url("/fonts/dobraslab-book-webfont.woff") format("woff"),
-  url("/fonts/dobraslab-book-webfont.ttf") format("truetype");
+  url("./fonts/dobraslab-book-webfont.woff2") format("woff2"),
+  url("./fonts/dobraslab-book-webfont.woff") format("woff"),
+  url("./fonts/dobraslab-book-webfont.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -26,9 +26,9 @@
   font-family: "DobraSlabMedium";
   src: local("DobraSlab"),
   local("DobraSlabMedium"),
-  url("/fonts/dobraslab-medium-webfont.woff2") format("woff2"),
-  url("/fonts/dobraslab-medium-webfont.woff") format("woff"),
-  url("/fonts/dobraslab-medium-webfont.ttf") format("truetype");
+  url("./fonts/dobraslab-medium-webfont.woff2") format("woff2"),
+  url("./fonts/dobraslab-medium-webfont.woff") format("woff"),
+  url("./fonts/dobraslab-medium-webfont.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
